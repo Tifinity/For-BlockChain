@@ -1,0 +1,2 @@
+[ERROR] [2019-12-13 01:57:01] org.fisco.bcos.web3j.crypto.gm.GenCredential.createECDSAKeyPair(62) | create keypair of ECDSA failed, error msg:Zero length BigInteger
+[ERROR] [2019-12-13 02:01:48] org.fisco.bcos.web3j.crypto.gm.GenCredential.createECDSAKeyPair(62) | create keypair of ECDSA failed, error msg:Zero length BigInteger
