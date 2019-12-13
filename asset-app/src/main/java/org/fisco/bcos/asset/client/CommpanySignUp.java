@@ -111,7 +111,7 @@ public class CommpanySignUp extends JFrame implements ActionListener{
 			try {
 				admin.init(AssetClient.getAdminKey());
 				String addr = GenCredential.create(textField1.getText()).getAddress();
-				admin.register(addr, textField2.getText(), new BigInteger(textField3.getText()), new BigInteger(textField4.getText()));
+				admin.register(addr, textField2.getText(), new BigInteger(textField3.getText()), new BigInteger("10"));
 				System.out.printf("name: %s, address: %s\n", textField2.getText(), addr);
 			} catch (Exception e) {
 				System.out.println("Sign up failed:" + e.getMessage());
