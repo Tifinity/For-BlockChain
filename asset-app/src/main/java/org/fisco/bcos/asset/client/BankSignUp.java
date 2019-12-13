@@ -61,16 +61,16 @@ public class BankSignUp extends JFrame implements ActionListener{
 		btnOkay.addActionListener(this);
 		btnOkay.setForeground(Color.WHITE);
 		btnOkay.setFont(new Font("Dialog", Font.BOLD, 14));
-		btnOkay.setBackground(new Color(102, 204, 0));
-		btnOkay.setBounds(190, 238, 100, 30);
+		btnOkay.setBackground(Color.LIGHT_GRAY);
+		btnOkay.setBounds(190, 200, 100, 68);
 		contentPane.add(btnOkay);
 		
 		JButton btnCancel = new JButton("返回");
 		btnCancel.addActionListener(this);
 		btnCancel.setForeground(Color.WHITE);
 		btnCancel.setFont(new Font("Dialog", Font.BOLD, 14));
-		btnCancel.setBackground(new Color(204, 0, 0));
-		btnCancel.setBounds(390, 238, 100, 30);
+		btnCancel.setBackground(Color.LIGHT_GRAY);
+		btnCancel.setBounds(302, 200, 100, 68);
 		contentPane.add(btnCancel);
 		setVisible(true);
 	}

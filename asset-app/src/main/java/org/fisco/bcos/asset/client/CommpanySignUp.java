@@ -23,7 +23,6 @@ public class CommpanySignUp extends JFrame implements ActionListener{
 	private JTextField textField1;
 	private JTextField textField2;
 	private JTextField textField3;
-	private JTextField textField4;
 	private JLabel lblAddr;
 	private JLabel lblName;
 	private JLabel lblProperty;
@@ -60,25 +59,19 @@ public class CommpanySignUp extends JFrame implements ActionListener{
 		textField3.setBounds(160, 184, 360, 40);
 		contentPane.add(textField3);
 		
-		textField4 = new JTextField();
-		textField4.setFont(new Font("Dialog", Font.PLAIN, 16));
-		textField4.setColumns(10);
-		textField4.setBounds(160, 236, 360, 40);
-		contentPane.add(textField4);
-		
-		lblAddr = new JLabel("企业私钥");
+		lblAddr = new JLabel("私钥");
 		lblAddr.setHorizontalAlignment(SwingConstants.CENTER);
 		lblAddr.setFont(new Font("Dialog", Font.PLAIN, 16));
 		lblAddr.setBounds(60, 80, 100, 40);
 		contentPane.add(lblAddr);
 		
-		lblName = new JLabel("企业名称");
+		lblName = new JLabel("名称");
 		lblName.setHorizontalAlignment(SwingConstants.CENTER);
 		lblName.setFont(new Font("Dialog", Font.PLAIN, 16));
 		lblName.setBounds(60, 132, 100, 40);
 		contentPane.add(lblName);
 		
-		lblProperty = new JLabel("企业资产");
+		lblProperty = new JLabel("资产");
 		lblProperty.setHorizontalAlignment(SwingConstants.CENTER);
 		lblProperty.setFont(new Font("Dialog", Font.PLAIN, 16));
 		lblProperty.setBounds(60, 184, 100, 40);
@@ -93,17 +86,17 @@ public class CommpanySignUp extends JFrame implements ActionListener{
 		JButton btnOkay = new JButton("确认");
 		btnOkay.addActionListener(this);
 		btnOkay.setFont(new Font("Dialog", Font.BOLD, 14));
-		btnOkay.setBackground(new Color(102, 204, 0));
+		btnOkay.setBackground(Color.LIGHT_GRAY);
 		btnOkay.setForeground(new Color(255, 255, 255));
-		btnOkay.setBounds(190, 310, 100, 30);
+		btnOkay.setBounds(184, 265, 106, 75);
 		contentPane.add(btnOkay);
 		
 		JButton btnCancel = new JButton("返回");
 		btnCancel.addActionListener(this);
 		btnCancel.setForeground(new Color(255, 255, 255));
 		btnCancel.setFont(new Font("Dialog", Font.BOLD, 14));
-		btnCancel.setBackground(new Color(204, 0, 0));
-		btnCancel.setBounds(390, 310, 100, 30);
+		btnCancel.setBackground(Color.LIGHT_GRAY);
+		btnCancel.setBounds(322, 265, 100, 75);
 		contentPane.add(btnCancel);
 		setVisible(true);
 	}

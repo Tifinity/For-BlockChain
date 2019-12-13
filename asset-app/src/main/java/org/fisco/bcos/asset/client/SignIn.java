@@ -23,7 +23,10 @@ public class SignIn extends JFrame implements ActionListener{
 	private JLabel lblAddr;
 	private JLabel lblSignin;
 	private JLabel lblMsg;
-
+	
+	/**
+	 * Create the frame.
+	 */
 	public SignIn() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(0, 0, 680, 430);
@@ -35,19 +38,19 @@ public class SignIn extends JFrame implements ActionListener{
 		textField = new JTextField();
 		textField.setFont(new Font("Dialog", Font.PLAIN, 16));
 		textField.setColumns(10);
-		textField.setBounds(160, 140, 360, 40);
+		textField.setBounds(158, 92, 328, 33);
 		contentPane.add(textField);
 		
 		lblAddr = new JLabel("私钥");
 		lblAddr.setHorizontalAlignment(SwingConstants.CENTER);
 		lblAddr.setFont(new Font("Dialog", Font.PLAIN, 16));
-		lblAddr.setBounds(60, 140, 100, 40);
+		lblAddr.setBounds(66, 88, 100, 40);
 		contentPane.add(lblAddr);
 		
 		lblSignin = new JLabel("登录");
 		lblSignin.setHorizontalAlignment(SwingConstants.CENTER);
 		lblSignin.setFont(new Font("Dialog", Font.BOLD, 28));
-		lblSignin.setBounds(265, 67, 150, 40);
+		lblSignin.setBounds(260, 12, 150, 40);
 		contentPane.add(lblSignin);
 		
 		lblMsg = new JLabel("");
@@ -58,27 +61,28 @@ public class SignIn extends JFrame implements ActionListener{
 		
 		JButton btnSignin = new JButton("登录");
 		btnSignin.addActionListener(this);
-		btnSignin.setForeground(Color.WHITE);
+		btnSignin.setForeground(Color.BLACK);
 		btnSignin.setFont(new Font("Dialog", Font.BOLD, 14));
-		btnSignin.setBackground(new Color(102, 204, 0));
-		btnSignin.setBounds(160, 230, 100, 30);
+		btnSignin.setBackground(Color.LIGHT_GRAY);
+		btnSignin.setBounds(498, 72, 136, 74);
 		contentPane.add(btnSignin);
 		
 		JButton btnSignup1 = new JButton("银行注册");
 		btnSignup1.addActionListener(this);
-		btnSignup1.setForeground(Color.WHITE);
+		btnSignup1.setForeground(Color.BLACK);
 		btnSignup1.setFont(new Font("Dialog", Font.BOLD, 14));
-		btnSignup1.setBackground(new Color(204, 204, 0));
-		btnSignup1.setBounds(290, 230, 100, 30);
+		btnSignup1.setBackground(Color.LIGHT_GRAY);
+		btnSignup1.setBounds(224, 234, 136, 64);
 		contentPane.add(btnSignup1);
 		
 		JButton btnSignup2 = new JButton("企业注册");
 		btnSignup2.addActionListener(this);
-		btnSignup2.setForeground(Color.WHITE);
+		btnSignup2.setForeground(Color.BLACK);
 		btnSignup2.setFont(new Font("Dialog", Font.BOLD, 14));
-		btnSignup2.setBackground(new Color(204, 0, 0));
-		btnSignup2.setBounds(420, 230, 100, 30);
+		btnSignup2.setBackground(Color.LIGHT_GRAY);
+		btnSignup2.setBounds(75, 234, 136, 64);
 		contentPane.add(btnSignup2);
+		
 		setVisible(true);
 	}
 	
@@ -88,19 +92,22 @@ public class SignIn extends JFrame implements ActionListener{
 			try {
 				admin.init(AssetClient.getAdminKey());
 			} catch (Exception e) {
-				System.out.println("Sign in failed:" + e.getMessage());
+				// TODO Auto-generated catch block
+				//e.printStackTrace();
+				System.out.println("Sign up failed, error message is  " + e.getMessage());
 			}
-			String addr = GenCredential.create(textField.getText()).getAddress();
-
-			try {
-				AssetClient client = new AssetClient();
-				client.init(textField.getText());
-				System.out.println(addr);
-				new Menu(client);
-				this.dispose();
-			} catch (Exception e) {
-				System.out.println("Sign in failed:" + e.getMessage());
-			}
+			String addr = GenCredential.create(textField.getText()).getAddress();		//私钥对应的地址
+			
+				try {
+					AssetClient client = new AssetClient();
+					client.init(textField.getText());
+					new Menu(client);
+					this.dispose();
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					//e.printStackTrace();
+					System.out.println("Sign in failed, error message is  " + e.getMessage());
+				}
 		}
 		else if(arg0.getActionCommand() == "银行注册"){
 			new BankSignUp();

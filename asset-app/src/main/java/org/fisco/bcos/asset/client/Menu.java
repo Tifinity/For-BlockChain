@@ -32,40 +32,40 @@ public class Menu extends JFrame implements ActionListener{
 		
 		JButton btnTransaction = new JButton("签订单据");
 		btnTransaction.addActionListener(this);
-		btnTransaction.setBackground(new Color(102, 204, 0));
+		btnTransaction.setBackground(Color.LIGHT_GRAY);
 		btnTransaction.setForeground(new Color(255, 255, 255));
 		btnTransaction.setFont(new Font("Dialog", Font.BOLD, 16));
-		btnTransaction.setBounds(140, 85, 120, 40);
+		btnTransaction.setBounds(218, 118, 120, 40);
 		contentPane.add(btnTransaction);
 		
 		JButton btnTransfer = new JButton("转让单据");
 		btnTransfer.addActionListener(this);
 		btnTransfer.setForeground(new Color(255, 255, 255));
-		btnTransfer.setBackground(new Color(102, 204, 0));
+		btnTransfer.setBackground(Color.LIGHT_GRAY);
 		btnTransfer.setFont(new Font("Dialog", Font.BOLD, 16));
-		btnTransfer.setBounds(420, 85, 120, 40);
+		btnTransfer.setBounds(350, 118, 120, 40);
 		contentPane.add(btnTransfer);
 		
 		JButton btnFinancing = new JButton("申请融资");
 		btnFinancing.addActionListener(this);
 		btnFinancing.setForeground(new Color(255, 255, 255));
-		btnFinancing.setBackground(new Color(102, 204, 0));
+		btnFinancing.setBackground(Color.LIGHT_GRAY);
 		btnFinancing.setFont(new Font("Dialog", Font.BOLD, 16));
-		btnFinancing.setBounds(140, 160, 120, 40);
+		btnFinancing.setBounds(218, 160, 120, 40);
 		contentPane.add(btnFinancing);
 		
 		JButton btnSettlement = new JButton("结算支付");
 		btnSettlement.addActionListener(this);
 		btnSettlement.setForeground(new Color(255, 255, 255));
-		btnSettlement.setBackground(new Color(102, 204, 0));
+		btnSettlement.setBackground(Color.LIGHT_GRAY);
 		btnSettlement.setFont(new Font("Dialog", Font.BOLD, 16));
-		btnSettlement.setBounds(420, 160, 120, 40);
+		btnSettlement.setBounds(350, 160, 120, 40);
 		contentPane.add(btnSettlement);
 		
 		JButton btnLoginout = new JButton("退出登录");
 		btnLoginout.addActionListener(this);
 		btnLoginout.setForeground(new Color(255, 255, 255));
-		btnLoginout.setBackground(new Color(204, 0, 0));
+		btnLoginout.setBackground(Color.LIGHT_GRAY);
 		btnLoginout.setFont(new Font("Dialog", Font.BOLD, 16));
 		btnLoginout.setBounds(280, 270, 120, 40);
 		contentPane.add(btnLoginout);
